@@ -1,0 +1,21 @@
+package com.basicconcept;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		A aObj=new A();
+		
+		B bObj=new B();
+		
+		/* value of i is 100 of type int i.e. L.H.S Determines the property of variable
+		 * it means i can accept any int value
+		 * why it is 100 because R.H.S says it is 100 i.e. R.H.S determine the value of variable*/
+		int i=100;
+		//supperClass obj=new SubClass();
+		A obj=new B(); //therefore obj is b object and has properties of A
+		obj.methodA();
+		//not possible
+		//B obj=new A(); //Type mismatch: cannot convert from A to B
+	}
+
+}

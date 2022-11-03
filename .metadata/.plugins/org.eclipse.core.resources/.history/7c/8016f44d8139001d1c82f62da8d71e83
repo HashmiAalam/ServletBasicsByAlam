@@ -1,0 +1,28 @@
+package com.in28minutes.learnspringframework;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.in28minutes.learnspringframework.game.ContraGame;
+import com.in28minutes.learnspringframework.game.GameRunner;
+import com.in28minutes.learnspringframework.game.GameRunner2;
+import com.in28minutes.learnspringframework.game.MarioGame;
+
+@SpringBootApplication
+public class LearnSpringFrameworkApplication {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(LearnSpringFrameworkApplication.class, args);
+		//MarioGame game=new MarioGame();
+		/*
+		 * tight coupling 
+		 * even though we have ContraGame but we are not able to use GameRunner 
+		 * this is tight coupling we have to change constructor also in runner class 
+		 * because runner is expecting MarioGame object.
+		 */	
+	    ContraGame game=new ContraGame(); 
+		GameRunner2 runner=new GameRunner2(game);
+		runner.runGame();
+	}
+
+}

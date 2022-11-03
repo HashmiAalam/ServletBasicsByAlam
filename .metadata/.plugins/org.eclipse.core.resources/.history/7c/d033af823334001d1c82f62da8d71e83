@@ -1,0 +1,14 @@
+package com.singleton;
+
+public class TestLogger {
+
+	public static void main(String[] args) {
+		/*The constructor Logger() is not visible if we declare default constructor private
+		i.e. we can not create an object with new keyword like new Logger();*/
+		Logger logger=Logger.getInstance();
+		Logger logger1=Logger.getInstance();
+		System.out.println(logger);
+		System.out.println(logger1);
+	}
+
+}

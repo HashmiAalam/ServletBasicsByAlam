@@ -1,0 +1,16 @@
+package com.car.learnspringmvc.mvc.business;
+@Component
+class Business{
+	@Autowired
+	private Data data;
+	
+	public String response() {
+		Data data2 = data;
+		String[] response = data2.getResponse();
+		String str="";
+		for(String s:response) {
+			str=str+s;
+		}
+		return str;
+	}
+}

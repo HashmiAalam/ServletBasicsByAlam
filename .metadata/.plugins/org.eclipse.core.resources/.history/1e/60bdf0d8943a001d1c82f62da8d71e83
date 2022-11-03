@@ -1,0 +1,11 @@
+package com.car.learnspringmvc;
+
+public class carTyres {
+	public void tyreSize() {
+		System.out.println("XL");
+	}
+	public void tyreMaterial() {
+		System.out.println("Nylon");
+	}
+
+}

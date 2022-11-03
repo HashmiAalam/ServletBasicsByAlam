@@ -1,0 +1,18 @@
+package com.tut;
+
+import com.mysql.cj.xdevapi.SessionFactory;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project started" );
+        SessionFactory factory= new SessionFactory();
+        System.out.println(factory);
+        
+    }
+}

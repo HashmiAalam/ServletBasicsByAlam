@@ -1,0 +1,14 @@
+package com.basicconcept.collection;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Propertiesfile {
+
+	public static void main(String[] args) throws FileNotFoundException {
+        //loading the properties file
+		FileInputStream fileInputStream=new FileInputStream("propertiesexample.properties");
+		Properties prope
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.dss;
+public class Logger {
+
+	protected Logger(){
+		
+	}
+}

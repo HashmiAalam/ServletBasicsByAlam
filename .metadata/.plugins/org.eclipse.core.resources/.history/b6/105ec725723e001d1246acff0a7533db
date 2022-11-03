@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Addition of two numbers</title>
+</head>
+<body>
+<form action="Addition">
+<h2>Enter two numbers</h2><br/>
+Number1:<input name="number1" type="Number"/><br/>
+Number2:<input name="number2" type="Number"/><br/>
+<input name="submit" type="submit"/><br/>
+</form>
+</body>
+</html>

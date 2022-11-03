@@ -1,0 +1,9 @@
+package com.in28minutes.learnspringframework.sample.enterprise.flow.data;
+//getting data
+@Component
+ class DataService {
+
+	 public List<Integer> getData() {
+		 return Arrays.asList(10,20,30);
+	 }
+}

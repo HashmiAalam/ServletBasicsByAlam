@@ -1,0 +1,17 @@
+package com.recursion;
+
+public class Febonacci1 {
+
+	public static void main(String[] args) {
+		febonacci(3);
+	}
+
+	private static void febonacci(int count) {
+		System.out.println("Hi");
+		if(count<=1) {
+			return;
+		}
+		febonacci(count-1);
+	}
+
+}

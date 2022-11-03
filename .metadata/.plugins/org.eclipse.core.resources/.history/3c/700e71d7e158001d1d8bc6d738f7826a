@@ -1,0 +1,15 @@
+package com.recursion;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Itr itr=new Itr() {
+			public void disply() {
+				System.out.println("Hi");
+			}
+	};
+	}
+}
+interface Itr{
+	void disply();
+}

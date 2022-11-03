@@ -1,0 +1,26 @@
+package com.singleton;
+
+public class TestLogger {
+
+	public static void main(String[] args) {
+		/*
+		 * we know that if we have a class we can create multiple object of a class like below
+		 * I will get new object every time*/
+		SamlpeClass samlpeClass=new SamlpeClass();//without an constructor we can not create an object of a class.
+		SamlpeClass samlpeClass1=new SamlpeClass();
+		System.out.println(samlpeClass);
+		System.out.println(samlpeClass1);
+		/*But singleton pattern says we should be able to create only one object of a class.
+		 * we know that whenever an object is created by default the constructor is executed.
+		 * whenever we create an object constructor method is executed and create an object of logger. 
+		 * The constructor Logger() is not visible if we declare default constructor as private
+		i.e. we can not create an object with new keyword like new Logger(); because we are not 
+		able to access constructor outside of class*/
+		System.out.println("Object with singleton pattern and I will get same object every time");
+		Logger logger=Logger.getInstance();
+		Logger logger1=Logger.getInstance();
+		System.out.println(logger);
+		System.out.println(logger1);
+	}
+
+}

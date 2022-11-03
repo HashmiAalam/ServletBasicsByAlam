@@ -1,0 +1,8 @@
+package com.car.learnspringmvc.mvc.data;
+@Component
+class Data{
+	public String[] getResponse() {
+		String[] str={"Alam","Wakeel"};
+		return  str;
+	}
+}

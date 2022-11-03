@@ -1,0 +1,18 @@
+package com.car.learnspringmvc;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+	private Business business;
+	@RequestMapping("/message")
+	public String message() {
+		return business.response();
+	}
+}
+class Business{
+	public String response() {
+		return "This is spring-MVC";
+	}
+}

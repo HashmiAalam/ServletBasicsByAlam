@@ -1,0 +1,15 @@
+package com.java.basics;
+public class Test{
+	public static void main(String[] args) {
+	LinkedList<String> nameLinkedList=new LinkedList<String>();
+	nameLinkedList.add("ALi");
+	nameLinkedList.add("Wakeel");
+	nameLinkedList.add("Ruman");
+	nameLinkedList.add("Atif");
+	ArrayList<String> nameArrayList=new ArrayList<>();
+	nameArrayList.add("ALi");
+	nameArrayList.add("Wakeel");
+	nameArrayList.add("Ruman");
+	nameArrayList.add("Atif");
+	}
+}

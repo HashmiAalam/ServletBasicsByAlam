@@ -1,0 +1,44 @@
+package com.basicconcept.collection;
+
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.Collection;
+import java.util.Comparator;
+//import java.util.*;
+public class Test1{
+	public static void main(String[] args){
+		TreeMap<Product, Customer> h=new TreeMap(new myComp());
+		h.put(new Product("Oil",11,12.3),new Customer("Ratan","Bandra"));
+		h.put(new Product("Rice",2,19.5),new Customer("Anu","Kurla"));
+		h.put(new Product("Car",1,12444.34),new Customer("Wakeel","Kurla"));
+		h.put(new Product("Cycle",3,1254.39),new Customer("Ratan","Andheri"));
+		//insersion order is not preserved
+		System.out.println(h);//{3=Ratan, 23=Durga, 121=Anu, 13=Anu}
+		Set<Product> keys=h.keySet();
+		System.out.println(keys);//[3, 23, 121, 13]
+		Collection<Customer> values=h.values();
+		System.out.println(values);//[Ratan, Durga, Anu, Anu]
+		Set<Entry<Product,Customer>> entreis=h.entrySet();
+		for(Entry<Product,Customer> e:entreis){
+			System.out.println(e.getKey()+" "+e.getValue());
+		}
+		}
+	
+}
+class myComp implements Comparator<Product>{
+
+	@Override
+	public int compare(Product p1, Product p2) {
+		int id = p1.getpId();
+		int id1 = p2.getpId();
+		if(id>id1) {
+			return 0;
+		}else if(id==id1) {
+			return 1;
+		}else
+		return -1;
+	}
+	
+}

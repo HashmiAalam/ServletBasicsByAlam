@@ -1,0 +1,30 @@
+package com.in28minutes.learnspringframework.game;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class GameRunner {
+
+	@Autowired
+	private GamingConsole game;
+	/*
+	 * Because of this constructor GameRunner will accept any class object
+	 * which implements GamingConsloe this is loosely coupled class
+	 */
+	public GameRunner(GamingConsole game) {
+		this.game=game;
+	}
+
+	public void runGame() {
+		game.up();
+		game.down();
+		game.right();
+		game.left();
+		
+	}
+	
+}

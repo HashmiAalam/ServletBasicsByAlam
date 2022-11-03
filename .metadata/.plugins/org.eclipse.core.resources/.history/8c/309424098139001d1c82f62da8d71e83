@@ -1,0 +1,22 @@
+package com.in28minutes.learnspringframework.game;
+
+public class GameRunner {
+
+	private MarioGame game;
+	/*
+	 * Because of this constructor GameRunner will accept MarioGame object
+	 * this is tightly coupled class to MarioGame
+	 */
+	public GameRunner(MarioGame game) {
+		this.game=game;
+	}
+
+	public void runGame() {
+		game.up();
+		game.down();
+		game.right();
+		game.left();
+		
+	}
+
+}

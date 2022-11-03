@@ -1,0 +1,16 @@
+package com.recursion;
+
+public class Febonacci1 {
+
+	public static void main(String[] args) {
+		int n=6;
+		febonacci(n);
+	}
+
+	private static long febonacci(int n) {
+		
+		long l = febonacci(n-1)+febonacci(n-2);
+		return l;
+	}
+
+}

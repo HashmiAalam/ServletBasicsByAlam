@@ -1,0 +1,12 @@
+package com.dss;
+
+public class TestLogger {
+
+	public static void main(String[] args) {
+		Logger logger=Logger.getInstance();//The constructor Logger() is not visible if we declare default constructor private
+		Logger logger1=Logger.getInstance();
+		System.out.println(logger);
+		System.out.println(logger1);
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.basics;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class AccountDAO {
+
+	public static void main(String[] args) {
+		try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/mydb", "root", "Sherjilraza@312");
+				Statement statement = connection.createStatement();
+				ResultSet resultSet = statement.executeQuery("Select * from account");) {
+			System.out.println(connection);
+			//int result = statement.executeUpdate("insert into account values(123,'Hashmi','Alam',10000)");
+			//System.out.println(result+" account created");
+			//let's update account balance
+			//int executeUpdate = statement.executeUpdate("update account set bal=30900 where accno=123");
+			//System.out.println(executeUpdate+" count updated");
+			//To remove entry
+			//int executeDelete = statement.executeUpdate("delete from account where accno=123");
+			//System.out.println(executeDelete+" row Deleted");
+			//to get all entry
+			while(resultSet.next()) {
+				System.out.println(resultSet.getInt(1)+" "+ resultSet.getString(2)+" "+resultSet.getString(3)+" "+resultSet.getInt(4));
+			}
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	}
+
+}

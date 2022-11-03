@@ -1,0 +1,12 @@
+package com.in28minutes.learnspringframework.sample.enterprise.flow.business;
+//business logic
+@Component
+ class BusinessService {
+	@Autowired
+	private DataService dataService;
+	 public long calculateSum() {
+		  List<Integer> data = dataService.getData();
+		  return data.stream().reduce(Integer::sum).get();
+	 }
+
+}

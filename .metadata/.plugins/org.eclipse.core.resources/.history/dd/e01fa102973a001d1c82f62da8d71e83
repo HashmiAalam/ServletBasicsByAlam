@@ -1,0 +1,14 @@
+package com.car.learnspringmvc;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class CarTyres implements CarParts{
+	public void size() {
+		System.out.println("XL");
+	}
+	public void material() {
+		System.out.println("Nylon");
+	}
+
+}

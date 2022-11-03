@@ -1,0 +1,16 @@
+package com.car.learnspringmvc;
+
+public class CarManufacturer {
+
+	private CarEngene engen;
+	public CarManufacturer(CarEngene engen) {
+		this.engen=engen;
+	}
+
+	public void runCar() {
+		engen.engenSize();
+		engen.engenMaterial();
+		
+	}
+
+}

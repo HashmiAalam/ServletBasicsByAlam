@@ -1,0 +1,12 @@
+package com.recursion;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Itr itr=   abc->System.out.println("Hi"+abc);
+	itr.disply("abc");
+	}
+}
+interface Itr{
+	void disply(String abc);
+}

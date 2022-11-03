@@ -1,0 +1,19 @@
+package com.springfirstsampleproject;
+
+/**
+ * This is a project to manage employee data in TCS
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello developer in TCS" );
+        Employee emp= new Employee();
+        emp.setEmpId(111);
+        emp.setEmpName("Alam");
+        emp.setEmpSalary(34000.5);
+        System.out.println(emp);
+        	
+    }
+}

@@ -1,0 +1,2 @@
+#This will print all logger info of classes having package with org.springframework
+logging.level.org.springframework=DEBUG

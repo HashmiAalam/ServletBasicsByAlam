@@ -1,0 +1,17 @@
+package com.car.learnspringmvc;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LearnSpringMvcApplication {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(LearnSpringMvcApplication.class, args);
+		CarEngene engen=new CarEngene();
+		//CarTyres carTyres=new CarTyres();
+		CarManufacturer carManufacturer=new CarManufacturer(carTyres); // now I have to create constructor with CarTyres object.
+		carManufacturer.runCar();
+	}
+
+}

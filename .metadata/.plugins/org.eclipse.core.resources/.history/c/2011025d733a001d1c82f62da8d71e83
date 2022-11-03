@@ -1,0 +1,23 @@
+package com.in28minutes.learnspringframework.sample.enterprise.flow;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+//sending and response in the right format
+@RestController
+ class Conrroller {
+	//whenever user hit /sum this method will be executed
+	@RequestMapping("/sum")
+	public long Displaysum() {
+		return 100;
+		
+	}
+}
+//business logic
+ class BusinessService {
+
+}
+//getting data
+ class DataService {
+
+}

@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html" import="java.util.Date"%>
+<!DOCTYPE html>
+<html>
+<body>
+<!-- Declaration tag -->
+<%! Date d=null; %>
+<!-- Scriptlet tag -->
+<%
+ d=new Date();
+%>
+<!-- Expression Tag -->
+Today date:<%=d %>
+</body>
+</html>

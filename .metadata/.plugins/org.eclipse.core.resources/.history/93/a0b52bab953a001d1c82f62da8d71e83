@@ -1,0 +1,11 @@
+package com.car.learnspringmvc;
+
+public class CarEngene {
+
+	public void engenSize() {
+		System.out.println("large");
+	}
+	public void engenMaterial() {
+		System.out.println("silver");
+	}
+}

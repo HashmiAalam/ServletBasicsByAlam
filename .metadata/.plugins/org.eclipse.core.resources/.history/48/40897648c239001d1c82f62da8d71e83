@@ -1,0 +1,29 @@
+#This will print all logger info of classes having package with org.springframework
+logging.level.org.springframework=DEBUG
+#These logs are going to be change every time by spring please consider impotent points
+#Identified candidate component class: file [GameRunner.class]-->it is printed on log because of @Component
+#Identified candidate component class: file [MarioGame.class]-->it is printed on log because of @Component
+#-->once we have component classes the spring will try to create one instance of those classes
+#Creating shared instance of singleton bean 'gameRunner'
+#Creating shared instance of singleton bean 'marioGame'
+#-->spring identified MarioGame and GameRunner as beans with the help of @component annotation now dependency is defined by the help of @Autowired
+#  i.e. spring will understand I have to create instance of implementation of GamingConsole via constructor
+#  GamingConsole is dependency of GameRunner i.e. for execution of GameRunner we need GamingConsole
+#Autowiring by type from bean name 'gameRunner' via constructor to bean named 'marioGame'
+#@ComponentScan annotation :- it is inside @SpringBootApplication and its mean I have to scan 'com.in28minutes.learnspringframework' package
+# once spring is able find component classes then it starts creating instances for them
+#Dependency injection:- whatever we see spring framework do in this example is dependency injection i.e.it does a component scan, it
+                       # identifies component classes, it creates instances for them, it identifies dependencies are present for each of 
+                       # these classes and it creates instances for those dependencies and also it wire dependencies. This enter process
+                       # is called Dependency injection or inversion of control.
+                       # without spring we are responsible to create object of MarioGame, GameRunner etc but now control of creating 
+                       # object is goes into hand of Spring this is called Inversion of Control(IoC)
+#Spring beans:- An object managed by Spring Framework:- once spring find component classes it create instances for them i.e. spring create
+               # instance of MarioGame etc. these instances are also called spring beans. These are beans managed by spring framework
+               
+#IoC container:- the technical component inside this spring framework which implements the dependency logic is what is called the IoC container
+#Note:- Dependency Injection is a concept and dependency injection feature in spring framework is provided by IoC container present in
+       # spring framework
+#Types of IoC container:-1) ApplicationContext :- we used this in current application.
+                        #2) BeanFactory(simpler feature-rarely used)
+#Responsebilities of IoC container:- 1) Autowiring:- Process of wiring in dependencies for spring beans       

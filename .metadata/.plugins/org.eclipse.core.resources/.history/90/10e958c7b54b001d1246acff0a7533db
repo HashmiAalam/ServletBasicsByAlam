@@ -1,0 +1,24 @@
+package com.bharat.training.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.GenericServlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+
+public class HelloWorld extends GenericServlet {
+
+	@Override
+	public void service(ServletRequest requset, ServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter writer = response.getWriter();
+		writer.println("<html>");
+		writer.println("<body>");
+		writer.println("<h1>Hello Servlet world</h1>");
+		writer.println("</body>");
+		writer.println("</html>");
+	}
+
+}

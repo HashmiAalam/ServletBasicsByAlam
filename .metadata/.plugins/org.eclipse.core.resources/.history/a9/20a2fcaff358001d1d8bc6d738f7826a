@@ -1,0 +1,30 @@
+package com.prime;
+
+import java.util.ArrayList;
+import java.util.List;
+/*
+ * the prime no is hole no which is greater then 1 
+ * and it is divisible by 1 and by its on e.g. 7 is a prime no*/
+public class TestPrime {
+
+	public static void main(String[] args) {
+		List<Integer> primeNumbers=new ArrayList<Integer>();
+		for(int numberToCheck=2;numberToCheck<=100;numberToCheck++) {
+			boolean isPrime=true;
+			for(int factor=2;factor<=numberToCheck/2;factor++) {
+				if(numberToCheck % factor==0) {
+					isPrime=false;
+					break;
+				}
+			}
+			if(isPrime) {
+				primeNumbers.add(numberToCheck);
+			}
+		}
+		System.out.println("The prime nos till 100");
+		for(int no:primeNumbers) {
+			System.out.println(no);
+		}
+	}
+
+}

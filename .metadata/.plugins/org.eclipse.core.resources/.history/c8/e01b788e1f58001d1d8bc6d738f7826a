@@ -1,0 +1,16 @@
+package com.recursion;
+
+public class RecursionExample {
+
+	public static void main(String[] args) {
+		sayHi(3);
+	}
+
+	private static void sayHi(int count) {
+		if(count<=1) {
+			return;
+		}
+		sayHi(count-1);
+	}
+
+}

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="first.jsp" method="post">
+User Name<input type="text" name="username"/><br>
+User Age<input type="text" name="age"/>
+<input type="submit" value="Next">
+</form>
+</body>
+</html>

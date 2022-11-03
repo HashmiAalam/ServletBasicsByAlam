@@ -1,0 +1,16 @@
+package com.car.learnspringmvc;
+
+public class CarManufacturer {
+
+	private CarParts parts;
+	public CarManufacturer(CarParts parts) {
+		this.parts=parts;
+	}
+
+	public void runCar() {
+		parts.size();
+		parts.material();
+		
+	}
+
+}
